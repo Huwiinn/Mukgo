@@ -1,0 +1,28 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 버튼 컴포넌트 만들면 이하 속성 복사 붙히기 */
+
+.form button {
+  /* margin 초기화 후, right으로 오른쪽에 붙게 설정 */
+  margin: 0 auto;
+  margin-right: 0;
+  padding: 8px 24px;
+
+  font-weight: bold;
+  font-size: 16px;
+  color: #1b4001;
+
+  border: none;
+  border-radius: 12px;
+
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.form button:hover {
+  background-color: #000;
+  color: #f2f2f2;
+}
