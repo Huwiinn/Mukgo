@@ -1,0 +1,25 @@
+.meal {
+  margin-bottom: 16px;
+  border-bottom: 1px solid #fff;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+
+  padding: 12px 0;
+}
+
+.description {
+  font-style: italic;
+
+  padding: 8px 0;
+}
+
+.price {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: bold;
+
+  color: #faa520;
+}

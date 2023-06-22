@@ -1,0 +1,73 @@
+.button {
+  max-width: 180px;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin-right: 100px;
+  padding: 8px 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #fff;
+
+  transition-duration: 0.3s;
+
+  cursor: pointer;
+}
+
+.button .count {
+  padding: 4px 8px;
+
+  border-radius: 12px;
+
+  background-color: #97bf7a;
+  color: #000;
+
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #333;
+  animation-name: button_animation;
+  animation-duration: 0.3s;
+  box-shadow: 3px 3px 10px #333;
+}
+
+.button:hover .cart {
+  filter: invert(99%) sepia(35%) saturate(48%) hue-rotate(160deg)
+    brightness(111%) contrast(90%);
+}
+
+.button:hover p,
+.button:hover .count {
+  color: #f2f2f2;
+}
+
+.cart {
+  width: 24px;
+  height: 24px;
+  color: #fff;
+}
+
+@keyframes button_animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(8deg);
+  }
+
+  75% {
+    transform: rotate(4deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}

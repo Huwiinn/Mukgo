@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import { Reset } from "styled-reset";
+import { createGlobalStyle } from "styled-components";
+import Header from "./components/Layout/Header";
+import Meals from "./components/Meals/Meals";
+
+const GlobalStyle = createGlobalStyle`
+    body {
+      font-family: 'Rubik', 'Noto Sans KR' , sans-serif;
+    }
+
+    li {
+      list-style : none;
+    }
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Reset />
+      <GlobalStyle />
+      <Header />
+      <main>
+        <Meals />
+      </main>
+    </>
   );
 }
 
