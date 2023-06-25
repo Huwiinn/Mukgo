@@ -36,6 +36,7 @@ const AvailableMeals = () => {
   // 배열 데이터를 가져와서 맵핑 후, 데이터 출력
   const mealList = DUMMY_MEALS.map((meal) => (
     <MealItem
+      id={meal.id}
       key={meal.id}
       name={meal.name}
       description={meal.description}

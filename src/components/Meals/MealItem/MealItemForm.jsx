@@ -3,7 +3,7 @@ import Button from "../../UI/Button/Button";
 import Input from "../../UI/Input/Input";
 import styled from "./MealItemForm.module.css";
 
-const MealItemForm = () => {
+const MealItemForm = (props) => {
   const [amount, setAmount] = useState(0);
 
   return (
@@ -11,7 +11,7 @@ const MealItemForm = () => {
       <Input
         label="Amount"
         input={{
-          id: "amount",
+          id: "amount_" + props.id,
           type: "number",
           min: "1",
           max: "5",

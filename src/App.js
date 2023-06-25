@@ -3,6 +3,7 @@ import { Reset } from "styled-reset";
 import { createGlobalStyle } from "styled-components";
 import Header from "./components/Layout/Header";
 import Meals from "./components/Meals/Meals";
+import Cart from "./components/Cart/Cart";
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -19,6 +20,7 @@ function App() {
     <>
       <Reset />
       <GlobalStyle />
+      <Cart />
       <Header />
       <main>
         <Meals />
