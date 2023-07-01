@@ -3,29 +3,41 @@ import { Reset } from "styled-reset";
 import { createGlobalStyle } from "styled-components";
 import Header from "./components/Layout/Header";
 import Meals from "./components/Meals/Meals";
-import Cart from "./components/Cart/Cart";
+import Cart from "./components/UI/Cart/Cart.jsx";
+import { useState } from "react";
+import CartProvider from "./components/store/CartProvider";
 
 const GlobalStyle = createGlobalStyle`
     body {
       font-family: 'Rubik', 'Noto Sans KR' , sans-serif;
     }
 
-    li {
+    ol,ul,li {
       list-style : none;
     }
 `;
 
 function App() {
+  const [isCartShow, setIsCartShow] = useState(false);
+
+  const showCartHandler = () => {
+    setIsCartShow(true);
+  };
+
+  const hideCartHandler = () => {
+    setIsCartShow(false);
+  };
+
   return (
-    <>
+    <CartProvider>
       <Reset />
       <GlobalStyle />
-      <Cart />
-      <Header />
+      {isCartShow && <Cart onClose={hideCartHandler} />}
+      <Header onShowCart={showCartHandler} />
       <main>
         <Meals />
       </main>
-    </>
+    </CartProvider>
   );
 }
 

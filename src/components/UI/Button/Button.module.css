@@ -31,11 +31,15 @@
   font-weight: bold;
 }
 
-.button:hover {
+/* .button:hover {
   background-color: #333;
   animation-name: button_animation;
   animation-duration: 0.3s;
   box-shadow: 3px 3px 10px #333;
+} */
+
+.bump {
+  animation: button_animation 300ms ease-out;
 }
 
 .button:hover .cart {

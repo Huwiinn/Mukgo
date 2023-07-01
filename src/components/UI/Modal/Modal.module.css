@@ -28,6 +28,8 @@
   }
 }
 
+/* opacity 0으로 Y축 -3rem의 위치에서 시작.  */
+/* opacity 1으로 Y축 0의 위치에서 끝.  */
 @keyframes slide-down {
   from {
     opacity: 0;
